@@ -33,7 +33,7 @@ exports.updateCar = async (req, res) => {
 
 exports.deleteCar = async (req, res) => {
   try {
-    await Car.findByIdAndRemove(req.params.id);
+    await Car.findByIdAndDelete(req.params.id);
     res.status(200).send({ message: 'Car deleted successfully' });
   } catch (err) {
     console.error('Error deleting car:', err);
